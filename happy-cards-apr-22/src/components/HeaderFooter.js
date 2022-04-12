@@ -1,4 +1,5 @@
 export default function HeaderFooter(props) {
+  console.log("props is: ", props);
   return (
     <div>
       <div className="HeaderFooterColorBar" />

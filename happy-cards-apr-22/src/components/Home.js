@@ -13,9 +13,18 @@ export default function Home() {
         </h2>
       </div>
       <div className="Home-HighlightsSection">
-        <HighlightCard header="Select a Holiday" />
-        <HighlightCard header="Pick a Design" />
-        <HighlightCard header="Let Us Deliver It" />
+        <HighlightCard
+          header="Select a Holiday"
+          subtext="Choose from 500+ holidays, the most of any e-card maker."
+        />
+        <HighlightCard
+          header="Pick a Design"
+          subtext="Explore hundreds of amazing designs curated by our expert designers."
+        />
+        <HighlightCard
+          header="Let Us Deliver It"
+          subtext="We'll automatically send it to your loved one on a date you select."
+        />
       </div>
     </div>
   );
