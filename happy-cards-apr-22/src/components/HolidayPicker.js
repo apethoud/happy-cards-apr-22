@@ -44,18 +44,3 @@ export default function HolidayPicker() {
     </div>
   );
 }
-
-// function getNameAndFunctionToUpdateName(initialName) {
-//   let name = initialName;
-//   let functionToUpdateName = (newName) => {
-//     name = newName;
-//   };
-
-//   return [name, functionToUpdateName];
-// }
-// // Array Destructuring
-// let [userName, setUserName] = getNameAndFunctionToUpdateName("Andrew");
-
-// setUserName("Seena");
-
-let value = false && true;
