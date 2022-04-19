@@ -3,13 +3,15 @@ import "./App.scss";
 import Home from "./components/Home";
 import HeaderFooter from "./components/HeaderFooter";
 import HolidayPicker from "./components/HolidayPicker";
+import CardForm from "./components/CardForm";
 
 function App() {
   return (
     <div>
       <HeaderFooter>
         {/* <Home /> */}
-        <HolidayPicker />
+        {/* <HolidayPicker /> */}
+        <CardForm />
       </HeaderFooter>
     </div>
   );
