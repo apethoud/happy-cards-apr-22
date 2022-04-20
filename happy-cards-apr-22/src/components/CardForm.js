@@ -45,6 +45,12 @@ export default function CardForm() {
           />
         </div>
         <div className="Form-InputWrapper">
+          <div className="Label">Pick a Holiday</div>
+          <button className="Button" type="button">
+            Choose
+          </button>
+        </div>
+        <div className="Form-InputWrapper">
           <label className="Label" htmlFor="Your Name">
             Your Name
           </label>
