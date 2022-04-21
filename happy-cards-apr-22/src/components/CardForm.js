@@ -1,12 +1,14 @@
 import { useState, useRef } from "react";
+import HolidayPickerModal from "./HolidayPickerModal";
 import LabeledTextInput from "./LabeledTextInput";
 
 export default function CardForm() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [recipientName, setRecipientName] = useState("");
   const [recipientEmail, setRecipientEmail] = useState("");
   const [senderName, setSenderName] = useState("");
   const [senderEmail, setSenderEmail] = useState("");
-  const exampleRef = useRef();
+  // const exampleRef = useRef();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -17,7 +19,7 @@ export default function CardForm() {
       senderEmail,
     };
     console.log("payload is: ", payload);
-    console.log("exampleRef.current.value is: ", exampleRef.current.value);
+    // console.log("exampleRef.current.value is: ", exampleRef.current.value);
   }
 
   return (
@@ -35,7 +37,11 @@ export default function CardForm() {
         />
         <div className="Form-InputWrapper">
           <div className="Label">Pick a Holiday</div>
-          <button className="Button" type="button">
+          <button
+            className="Button"
+            type="button"
+            onClick={() => setIsModalOpen(true)}
+          >
             Choose
           </button>
         </div>
@@ -49,16 +55,20 @@ export default function CardForm() {
           value={senderEmail}
           setValue={setSenderEmail}
         />
-        <div>
+        {/* <div>
           <label htmlFor="exampleRef">
             Uncontrolled Input Example (using useRef())
           </label>
           <input name="exampleRef" type="text" ref={exampleRef} />
-        </div>
+        </div> */}
         <button type="submit" className="Button">
           Submit
         </button>
       </form>
+      <HolidayPickerModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </>
   );
 }
