@@ -21,7 +21,7 @@ const modalStyles = {
 };
 
 export default function HolidayPickerModal({ isModalOpen, setIsModalOpen }) {
-  const [selectedTimeframe, setSelectedTimeframe] = useState("year");
+  const [selectedTimeframe, setSelectedTimeframe] = useState("month");
   const [holidayList, setHolidayList] = useState([]);
 
   useEffect(() => {
@@ -56,7 +56,12 @@ export default function HolidayPickerModal({ isModalOpen, setIsModalOpen }) {
           <FontAwesomeIcon icon={faXmark} size="lg" />
         </div>
       </div>
-      <div>{holidayList.length}</div>
+      {holidayList.length > 0 &&
+        holidayList.map((holiday, index) => (
+          <div key={index} className="Modal-TableRow">
+            {holiday.date}: {holiday.name}
+          </div>
+        ))}
     </ReactModal>
   );
 }
