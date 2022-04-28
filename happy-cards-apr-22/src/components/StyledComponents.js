@@ -5,6 +5,7 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 700;
   border: 1px solid #ccc;
-  background-color: #fff;
+  color: ${(props) => (props.primary ? "white" : "black")};
+  background-color: ${(props) => (props.primary ? "darkturquoise" : "white")};
   cursor: pointer;
 `;
