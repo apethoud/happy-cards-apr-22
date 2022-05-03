@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import HolidayPickerModal from "./HolidayPickerModal";
 import LabeledTextInput from "./LabeledTextInput";
-import { Button } from "./StyledComponents";
+import { Label, Button } from "./StyledComponents";
 
 export default function CardForm() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -37,7 +37,7 @@ export default function CardForm() {
           setValue={setRecipientEmail}
         />
         <div className="Form-InputWrapper">
-          <div className="Label">Pick a Holiday</div>
+          <Label>Pick a Holiday</Label>
           <Button type="button" onClick={() => setIsModalOpen(true)}>
             Choose
           </Button>
