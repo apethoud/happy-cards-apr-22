@@ -9,8 +9,7 @@ function App() {
   return (
     <div>
       <HeaderFooter>
-        {/* <Home /> */}
-        {/* <HolidayPicker /> */}
+        <Home />
         <CardForm />
       </HeaderFooter>
     </div>
