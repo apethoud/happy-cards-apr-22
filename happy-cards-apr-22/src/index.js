@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import Home from "./components/Home";
+import CardForm from "./components/CardForm";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,7 +13,10 @@ ReactDOM.render(
     <ThemeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="card-form" element={<CardForm />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

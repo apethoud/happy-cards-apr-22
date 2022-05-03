@@ -1,16 +1,13 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import Home from "./components/Home";
 import HeaderFooter from "./components/HeaderFooter";
-import HolidayPicker from "./components/HolidayPicker";
-import CardForm from "./components/CardForm";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <HeaderFooter>
-        <Home />
-        <CardForm />
+        <Outlet />
       </HeaderFooter>
     </div>
   );
