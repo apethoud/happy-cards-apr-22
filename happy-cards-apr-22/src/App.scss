@@ -20,6 +20,11 @@ body {
 
 .Link {
   padding: 10px 20px;
+  text-decoration: none;
+}
+
+.Link.active {
+  font-weight: 700;
 }
 
 .Copyright {

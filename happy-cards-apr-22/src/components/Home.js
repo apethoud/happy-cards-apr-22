@@ -4,8 +4,12 @@ import {
   faObjectGroup,
   faPaperPlane,
 } from "@fortawesome/free-regular-svg-icons";
+import { Button } from "./StyledComponents";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  let navigate = useNavigate();
+
   return (
     <div className="Home-Container">
       <div className="Home-HeroSection">
@@ -33,6 +37,11 @@ export default function Home() {
           header="Let Us Deliver It"
           subtext="We'll automatically send it to your loved one on a date you select."
         />
+      </div>
+      <div style={{ margin: 20 }}>
+        <Button primary onClick={() => navigate("/card-form")}>
+          Get Started
+        </Button>
       </div>
     </div>
   );
