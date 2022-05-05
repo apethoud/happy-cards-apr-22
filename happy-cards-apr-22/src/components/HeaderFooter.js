@@ -25,6 +25,9 @@ export default function HeaderFooter(props) {
           <NavLink to="/login" className="Link">
             Login
           </NavLink>
+          <NavLink to="/profile" className="Link">
+            Profile
+          </NavLink>
         </div>
       </div>
       <div style={{ padding: 40 }}>

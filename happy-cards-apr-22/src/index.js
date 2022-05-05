@@ -9,6 +9,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route index element={<Home />} />
             <Route path="card-form" element={<CardForm />} />
             <Route path="login" element={<Login />} />
+            <Route path="profile/:id" element={<Profile />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
