@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
+import { Link } from "react-router-dom";
 
 export default function HeaderFooter(props) {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -15,9 +16,15 @@ export default function HeaderFooter(props) {
       >
         <div className="Logo">HappyCards</div>
         <div style={{ display: "flex" }}>
-          <div className="Link">Home</div>
-          <div className="Link">Make a Card</div>
-          <div className="Link">Login</div>
+          <Link to="/" className="Link">
+            Home
+          </Link>
+          <Link to="/card-form" className="Link">
+            Make a Card
+          </Link>
+          <Link to="/login" className="Link">
+            Login
+          </Link>
         </div>
       </div>
       <div style={{ padding: 40 }}>

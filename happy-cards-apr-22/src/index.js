@@ -7,6 +7,8 @@ import CardForm from "./components/CardForm";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
+import Login from "./components/Login";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +18,8 @@ ReactDOM.render(
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="card-form" element={<CardForm />} />
+            <Route path="login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
